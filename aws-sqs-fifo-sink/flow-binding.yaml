@@ -14,9 +14,11 @@ spec:
     ref:
       kind: Kamelet
       apiVersion: camel.apache.org/v1alpha1
-      name: aws-sqs-sink
+      name: aws-sqs-fifo-sink
     properties:
-      queueNameOrArn: "camel-kamelet"
+      queueNameOrArn: "camel-kamelet.fifo"
       accessKey: "xxxx"
       secretKey: "yyyy"
       region: "region"
+      messageGroupIdStrategy: "useExchangeId"
+      messageDeduplicationIdStrategy: "useExchangeId"
