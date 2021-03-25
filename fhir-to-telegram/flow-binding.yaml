@@ -1,0 +1,23 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: kafka-to-telegram
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: fhir-source
+    properties:
+      serverUrl: "http://hapi.fhir.org/baseR4"
+      url: "/Invoice?_id=c5f76444-2ee6-4522-9bc1-ee31da80a3fd"
+      username: "test"
+      password: "test" 
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: telegram-sink
+    properties:
+      authorizationToken: "authToken"
+      chatId: "chatId"
