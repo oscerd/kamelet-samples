@@ -1,0 +1,25 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: flow-binding
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: simulation-source
+    properties:
+      message: 'SNS Message'
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: aws-sns-fifo-sink
+    properties:
+      autoCreateTopic: "true"
+      topicNameOrArn: "camel-kamelet.fifo"
+      accessKey: "xxxx"
+      secretKey: "yyyy"
+      region: "region"
+      messageGroupIdStrategy: "useExchangeId"
+      messageDeduplicationIdStrategy: "useExchangeId"
