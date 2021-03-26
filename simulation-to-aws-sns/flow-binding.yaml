@@ -9,16 +9,17 @@ spec:
       apiVersion: camel.apache.org/v1alpha1
       name: simulation-source
     properties:
-      message: 'SQS Message'
+      message: 'SNS Message'
   sink:
     ref:
       kind: Kamelet
       apiVersion: camel.apache.org/v1alpha1
-      name: aws-sqs-fifo-sink
+      name: aws-sns-fifo-sink
     properties:
-      queueNameOrArn: "camel-kamelet.fifo"
-      accessKey: "AKIA3LNAP5JEHHLYANY3"
-      secretKey: "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"
-      region: "eu-west-1"
+      autoCreateTopic: "true"
+      topicNameOrArn: "camel-kamelet.fifo"
+      accessKey: "xxxx"
+      secretKey: "yyyy"
+      region: "region"
       messageGroupIdStrategy: "useExchangeId"
       messageDeduplicationIdStrategy: "useExchangeId"
