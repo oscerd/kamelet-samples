@@ -1,0 +1,30 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: flow-binding
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: timer-source
+    properties:
+      message: '"oscerd"'
+  steps:
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: aws-lambda-sink
+    properties:
+      function: "kamelet-github"
+      accessKey: "xxxx"
+      secretKey: "yyyy"
+      region: "region"
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: telegram-sink
+    properties:
+      authorizationToken: "authToken"
+      chatId: "chatId"
