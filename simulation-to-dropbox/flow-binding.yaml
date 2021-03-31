@@ -1,0 +1,30 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: flow-binding
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: simulation-source
+    properties:
+      message: 'Dropbox File'
+  steps:
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: set-dropbox-header
+    properties:
+      name: "file"
+      value: "test.txt"
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: dropbox-sink
+    properties:
+      accessToken: 'xxxxx'
+      remotePath: '/camel-test/'
+      clientIdentifier: 'yyyy'
+      uploadMode: 'add'

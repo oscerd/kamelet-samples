@@ -1,0 +1,29 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: set-dropbox-header
+  labels:
+    camel.apache.org/kamelet.type: "action"
+spec:
+  definition:
+    title: "Set Header"
+    description: "Adds a custom header with a constant value to the message"
+    required:
+      - name
+      - value
+    properties:
+      name:
+        title: name
+        description: The name of the header to be added
+        type: string
+      value:
+        title: Value
+        description: The value of the header
+        type: string
+  flow:
+    from:
+      uri: kamelet:source
+      steps:
+        - set-header:
+            name: "{{name}}"
+            constant: "{{value}}"
