@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: flow-binding
+  name: time-lambda-telegram
 spec:
   source:
     ref:
