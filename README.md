@@ -1,4 +1,4 @@
-=== Minikube setup
+# Minikube setup
 
 - Clone camel-k repository
 - Spin up a minikube cluster
