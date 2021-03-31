@@ -1,4 +1,4 @@
-# AWS DDB Streams to Telegram example
+# Simulation to AWS SNS FIFO Example
 
 - The AWS SNS FIFO Sink Kamelet is already provided by camel-k 1.4.0-SNAPSHOT installation
 
