@@ -4,7 +4,7 @@
 
 - Set the credentials options in flow-binding.yaml file
 
-- Run the following command
+- Run the following commands
 
 kubectl apply -f simulation-source.kamelet.yaml
 kubectl apply -f flow-binding.yaml
