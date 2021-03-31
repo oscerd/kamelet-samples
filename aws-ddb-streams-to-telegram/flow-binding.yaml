@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: kafka-to-telegram
+  name: ddb-streams-to-telegram
 spec:
   source:
     ref:
