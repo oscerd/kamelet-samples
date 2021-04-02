@@ -1,0 +1,22 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: simulation-to-aws-kinesis-firehose
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: simulation-source
+    properties:
+      message: 'Kinesis Firehose Message'
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: aws-kinesis-firehose-sink
+    properties:
+      streamName: "dataStream"
+      accessKey: "xxxx"
+      secretKey: "yyyy"
+      region: "region"
