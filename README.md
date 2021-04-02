@@ -1,4 +1,6 @@
-# Minikube setup
+# Kamelet Samples
+
+A collection of Kamelet Samples
 
 Needed:
 - Latest Minikube
@@ -25,3 +27,15 @@ Check if everything is working fine
 - kubectl get ip
 
 Run samples
+
+## Samples list
+
+- AWS DDB Streams to Telegram
+- FHIR to Telegram
+- Simulation source to AWS Kinesis Firehose
+- Simulation source to AWS SNS
+- Simulation source to AWS SQS
+- Simulation source to AWS SQS FIFO
+- Simulation source to Dropbox
+- Time-based Lambda invocation to Telegram
+
