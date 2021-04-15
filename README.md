@@ -36,6 +36,7 @@ Run samples
 - Simulation source to AWS SNS
 - Simulation source to AWS SQS
 - Simulation source to AWS SQS FIFO
+- Simulation source to Azure Storage Blob
 - Simulation source to Dropbox
 - Time-based Lambda invocation to Telegram
 
