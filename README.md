@@ -4,7 +4,7 @@ A collection of Kamelet Samples
 
 Needed:
 - Latest Minikube
-- Kamel 1.4.0-SNAPSHOT
+- Kamel 1.4.0
 
 - Clone camel-k repository
 
@@ -21,7 +21,7 @@ Build camel k
 - make images
 
 Install camel-k on minikube
-- ./kamel install --maven-repository https://repository.apache.org/content/repositories/snapshots@id=apache-snapshots@snapshots 
+- ./kamel install
 
 Check if everything is working fine
 - kubectl get ip
@@ -38,5 +38,6 @@ Run samples
 - Simulation source to AWS SQS FIFO
 - Simulation source to Azure Storage Blob
 - Simulation source to Dropbox
+- Simulation source to Log with insert header action
 - Time-based Lambda invocation to Telegram
 
