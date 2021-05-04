@@ -1,6 +1,6 @@
 # Kafka to LOG 
 
-- Use the quickstart for https://strimzi.io/quickstarts/
+- Use the quickstart for https://strimzi.io/quickstarts/ and follow the minikube guide.
 
 - Install camel-k on the kafka namespalce
 
