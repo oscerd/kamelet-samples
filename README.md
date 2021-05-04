@@ -40,5 +40,6 @@ Run samples
 - Simulation source to Azure Storage Blob
 - Simulation source to Dropbox
 - Simulation source to Log with insert header action
+- Simulation source to Log with replace field action
 - Time-based Lambda invocation to Telegram
 
