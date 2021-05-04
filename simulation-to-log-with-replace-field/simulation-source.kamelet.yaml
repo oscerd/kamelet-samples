@@ -1,0 +1,40 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: simulation-source
+  labels:
+    camel.apache.org/kamelet.type: source
+spec:
+  definition:
+    title: Timer Source
+    description: Produces periodic events with a custom payload.
+    required:
+      - message
+    properties:
+      period:
+        title: Period
+        description: The interval between two events in milliseconds
+        type: integer
+        default: 1000
+      message:
+        title: Message
+        description: The message to generate
+        type: string
+        example: hello world
+      contentType:
+        title: Content Type
+        description: The content type of the message
+        type: string
+        default: text/plain
+  flow:
+    from:
+      uri: timer:tick
+      parameters:
+        period: "{{period}}"
+      steps:
+      - set-header:
+          name: "Content-Type"
+          constant: "{{contentType}}"
+      - set-body:
+          constant: "{{message}}"
+      - to: kamelet:sink
