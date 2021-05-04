@@ -14,14 +14,8 @@ Spin up a minikube cluster
 Set up registry
 - minikube addons enable registry
 
-Use the minikube docker env
-- eval $(minikube docker-env)
-
-Build camel k
-- make images
-
 Install camel-k on minikube
-- ./kamel install
+- kamel install
 
 Check if everything is working fine
 - kubectl get ip
@@ -39,6 +33,7 @@ Run samples
 - Simulation source to AWS SQS FIFO
 - Simulation source to Azure Storage Blob
 - Simulation source to Dropbox
+- Simulation source to Kafka
 - Simulation source to Log with insert header action
 - Simulation source to Log with replace field action
 - Time-based Lambda invocation to Telegram
