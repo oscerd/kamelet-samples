@@ -27,6 +27,7 @@ Run samples
 - AWS DDB Streams to Telegram
 - FHIR to Telegram
 - Kafka to Log
+- Kafka to Log with value to key action
 - Simulation source to AWS Kinesis Firehose
 - Simulation source to AWS SNS
 - Simulation source to AWS SQS
