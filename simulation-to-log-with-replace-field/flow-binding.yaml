@@ -17,9 +17,9 @@ spec:
       apiVersion: camel.apache.org/v1alpha1
       name: replace-field-action
     properties:
-      enabled: "foo,bar"
-      disabled: "baz"
-      renames: "foo:fii2"
+      enabled: "bar"
+      disabled: "baz,foo"
+      renames: "bar:fifa"
   sink:
     ref:
       kind: Kamelet
