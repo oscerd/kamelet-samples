@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: kafka-to-log-with-value-to-key
+  name: kafka-to-log-with-value-to-key-1
 spec:
   source:
     ref:
@@ -24,7 +24,7 @@ spec:
       apiVersion: camel.apache.org/v1alpha1
       name: value-to-key-action
     properties:
-      fields: "foo,bar"
+      fields: "id, type"
   sink:
     ref:
       kind: Kamelet
