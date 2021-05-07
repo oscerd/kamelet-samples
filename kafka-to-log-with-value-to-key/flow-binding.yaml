@@ -24,7 +24,7 @@ spec:
       apiVersion: camel.apache.org/v1alpha1
       name: value-to-key-action
     properties:
-      fields: "id, type"
+      fields: "foo,bar"
   sink:
     ref:
       kind: Kamelet
