@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: kafka-to-log-with-value-to-key-1
+  name: kafka-to-log-with-value-to-key
 spec:
   source:
     ref:
@@ -15,16 +15,17 @@ spec:
   - ref:
       kind: Kamelet
       apiVersion: camel.apache.org/v1alpha1
-      name: insert-header-action
-    properties:
-      name: "Content-Type"
-      value: "application/json"
+      name: json-deserialize-action
   - ref:
       kind: Kamelet
       apiVersion: camel.apache.org/v1alpha1
       name: value-to-key-action
     properties:
       fields: "foo,bar"
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: json-serialize-action
   sink:
     ref:
       kind: Kamelet
