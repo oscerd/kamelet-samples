@@ -9,6 +9,7 @@
 kubectl apply -f log-sink.kamelet.yaml -n kafka
 kubectl apply -f kafka-not-secured-source.kamelet.yaml -n kafka
 kubectl apply -f json-deserialize-action.kamelet.yaml -n kafka
+kubectl apply -f json-serialize-action.kamelet.yaml -n kafka
 kubectl apply -f value-to-key-action.kamelet.yaml -n kafka
 kubectl apply -f flow-binding.yaml -n kafka
 
