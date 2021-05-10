@@ -36,6 +36,7 @@ Run samples
 - Simulation source to Dropbox
 - Simulation source to Kafka
 - Simulation source to Log with extract field action
+- Simulation source to Log with hoist field action
 - Simulation source to Log with insert field action
 - Simulation source to Log with insert header action
 - Simulation source to Log with mask field action
