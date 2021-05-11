@@ -4,6 +4,8 @@
 
 - Install camel-k on the kafka namespalce
 
+- Set the correct auth token and chat id for the telegram sink kamelet in flow-binding file.
+
 - Run the following commands
 
 kubectl apply -f kafka-not-secured-source.kamelet.yaml -n kafka
@@ -13,4 +15,4 @@ kubectl apply -f flow-binding.yaml -n kafka
 
 - Check logs
 
-kamel logs kafka-to-log -n kafka
+kamel logs kafka-to-log-with-manual-commit -n kafka
