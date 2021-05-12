@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: kafka-to-kafka-with-regex-router-1
+  name: kafka-to-kafka-with-regex-router
 spec:
   source:
     ref:
