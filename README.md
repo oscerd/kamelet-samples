@@ -26,6 +26,7 @@ Run samples
 
 - AWS DDB Streams to Telegram
 - FHIR to Telegram
+- Kafka to Kafka with regex router action
 - Kafka to Log
 - Kafka to Log with value to key action
 - Kafka to Log with manual commit and Telegram sink
