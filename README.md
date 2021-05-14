@@ -43,5 +43,6 @@ Run samples
 - Simulation source to Log with insert header action
 - Simulation source to Log with mask field action
 - Simulation source to Log with replace field action
+- Time-based HTTP Invocation invocation to Log
 - Time-based Lambda invocation to Telegram
 
