@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: timer-http-log
+  name: timer-http-kafka
 spec:
   source:
     ref:
