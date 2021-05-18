@@ -16,4 +16,4 @@ kubectl apply -f flow-binding.yaml -n kafka
 
 - Check logs
 
-kamel logs kafka-to-kafka-with-regex-router -n kafka
+kamel logs s3-to-kafka-with-timestamp-router -n kafka
