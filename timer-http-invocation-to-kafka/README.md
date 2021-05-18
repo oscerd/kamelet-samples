@@ -8,12 +8,12 @@
 
 - Run the following commands
 
-	kubectl apply -f kafka-not-secured-sink.yaml
-	kubectl apply -f flow-binding.yaml
+	kubectl apply -f kafka-not-secured-sink.yaml -n kafka
+	kubectl apply -f flow-binding.yaml -n kafka
 
 - Check logs
 
-	kamel logs timer-http-kafka
+	kamel logs timer-http-kafka -n kafka
 
 - Consume from the test-topic
 
