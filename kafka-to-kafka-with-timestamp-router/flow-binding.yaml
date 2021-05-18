@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: kafka-to-kafka-with-timestamp-router-3
+  name: kafka-to-kafka-with-timestamp-router
 spec:
   source:
     ref:
