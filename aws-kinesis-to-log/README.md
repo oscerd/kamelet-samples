@@ -1,13 +1,12 @@
-# AWS DDB Streams to Telegram example
+# AWS Kinesis to Log example
 
-- The DDB Streams Source Kamelet and Telegram sink Kamelet are already provided by camel-k 1.4.0-SNAPSHOT installation
-
-- Set the credentials options in flow-binding.yaml file
+- Set the credentials options in flow-binding.yaml file for AWS Kinesis
 
 - Run the following command
 
+kubectl apply -f log-sink.yaml
 kubectl apply -f flow-binding.yaml
 
 - Check logs
 
-kamel logs ddb-streams-to-telegram
+kamel logs aws-kinesis-to-log
