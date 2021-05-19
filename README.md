@@ -27,6 +27,7 @@ Run samples
 - AWS DDB Streams to Telegram
 - AWS Kinesis to Log
 - FHIR to Telegram
+- Secured HTTP to Log
 - Kafka to Kafka with regex router action
 - Kafka to Kafka with timestamp router action
 - Kafka to Log

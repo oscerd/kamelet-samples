@@ -1,10 +1,11 @@
-# Timer to HTTP log
+# HTTP Source to log
 
 - Run the following commands
 
+kubectl apply -f http-secured-source.yaml
 kubectl apply -f log-sink.yaml
 kubectl apply -f flow-binding.yaml
 
 - Check logs
 
-kamel logs time-http-log
+kamel logs secure-http-log
