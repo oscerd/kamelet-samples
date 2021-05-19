@@ -1,0 +1,39 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: simulation-to-kafka-4
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: simulation-source
+    properties:
+      message: '{ "id": "1", "ts":"1621405837000" }'
+      contentType: 'application/json'
+  steps:
+  -  ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: message-timestamp-router-action
+    properties:
+      topicFormat: 'simulation-$[timestamp]'
+      timestampFormat: 'YYYY-MM-dd'
+      timestampKeys: 'ts,timestamp'
+      timestampKeyFormat: 'timestamp'
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: kafka-not-secured-sink
+    properties:
+      brokers: 'my-cluster-kafka-bootstrap:9092'
+      topic: 'test-topic'
