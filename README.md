@@ -25,6 +25,7 @@ Run samples
 ## Samples list
 
 - AWS DDB Streams to Telegram
+- AWS Kinesis to Log
 - FHIR to Telegram
 - Kafka to Kafka with regex router action
 - Kafka to Kafka with timestamp router action
