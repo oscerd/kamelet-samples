@@ -14,4 +14,4 @@ kubectl apply -f flow-binding.yaml -n kafka
 
 - Check logs
 
-kamel logs simulation-to-kafka -n kafka
+kamel logs simulation-to-kafka-with-message-timestamp-router-action -n kafka
