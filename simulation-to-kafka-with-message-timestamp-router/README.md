@@ -8,6 +8,8 @@
 
 kubectl apply -f simulation-source.kamelet.yaml -n kafka
 kubectl apply -f kafka-not-secured-sink.kamelet.yaml -n kafka
+kubectl apply -f message-timestamp-router-action.kamelet.yaml -n kafka
+kubectl apply -f log-sink.kamelet.yaml -n kafka
 kubectl apply -f flow-binding.yaml -n kafka
 
 - Check logs
