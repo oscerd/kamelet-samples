@@ -1,0 +1,22 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: secured-http-log
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: http-secured-source
+    properties:
+      period: "5000"
+      url: 'http://httpbin.org/basic-auth/pippo/pippo'
+      authMethod: 'Basic'
+      authenticationPreemptive: true
+      authUsername: pippo
+      authPassword: pippo
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
