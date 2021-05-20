@@ -38,6 +38,7 @@ Run samples
 - Simulation source to AWS SNS
 - Simulation source to AWS SQS
 - Simulation source to AWS SQS FIFO
+- Simulation source to AWS Translate to Log
 - Simulation source to Azure Storage Blob
 - Simulation source to Dropbox
 - Simulation source to Kafka
