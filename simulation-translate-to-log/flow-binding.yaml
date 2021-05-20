@@ -1,0 +1,29 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: simulation-to-log-with-insert-field
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: simulation-source
+    properties:
+      period: '15000'
+      message: 'Questa è una vecchia storia'
+  steps:
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: aws-translate-action
+    properties:
+      accessKey: "access"
+      secretKey: "secret"
+      region: "region"
+      sourceLanguage: "it"
+      targetLanguage: "en"
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
