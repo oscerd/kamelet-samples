@@ -1,0 +1,25 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: timer-to-s3-1
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: timer-source
+    properties:
+      period: "5000"
+      message: '"Test "'
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: aws-s3-streaming-upload-sink
+    properties:
+      bucketNameOrArn: camel-kafka-connector
+      accessKey: accessKey
+      secretKey: secretKey
+      region: region
+      batchMessageNumber: 10
+      keyName: mytestfile.txt
