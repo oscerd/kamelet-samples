@@ -1,10 +1,10 @@
-# Timer to HTTP log
+# Timer to S3 Streaming Upload
 
 - Run the following commands
 
-kubectl apply -f log-sink.yaml
+kubectl apply -f aws-s3-streaming-upload-sink.kamelet.yaml
 kubectl apply -f flow-binding.yaml
 
 - Check logs
 
-kamel logs time-http-log
+kamel logs timer-to-s3

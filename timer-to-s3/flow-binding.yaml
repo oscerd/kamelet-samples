@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: timer-to-s3-1
+  name: timer-to-s3
 spec:
   source:
     ref:
@@ -10,7 +10,7 @@ spec:
       name: timer-source
     properties:
       period: "5000"
-      message: '"Test "'
+      message: 'Test '
   sink:
     ref:
       kind: Kamelet
