@@ -55,4 +55,5 @@ Run samples
 - Time-based to S3 Streaming Upload Sink
 - Time-based to Log with Has Header Filter
 - Time-based to Log with Tombstone Filter
+- Time-based to Log with Topic Name Matches Filter
 
