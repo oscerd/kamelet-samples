@@ -53,4 +53,5 @@ Run samples
 - Time-based HTTP Invocation invocation to Kafka
 - Time-based Lambda invocation to Telegram
 - Time-based to S3 Streaming Upload Sink
+- Time-based to Log with Has Header Filter
 
