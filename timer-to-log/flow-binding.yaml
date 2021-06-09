@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: timer-to-log-9
+  name: timer-to-log
 spec:
   source:
     ref:
@@ -9,13 +9,15 @@ spec:
       apiVersion: camel.apache.org/v1alpha1
       name: timer-source
     properties:
-      period: "5000"
-      message: '"Invocation"'
+      period: "10000"
+      message: 'Kamelet'
   steps:
   - ref:
       kind: Kamelet
       apiVersion: camel.apache.org/v1alpha1
-      name: filter-action
+      name: has-header-filter-action
+    properties:
+      name: "foo"
   sink:
     ref:
       kind: Kamelet
