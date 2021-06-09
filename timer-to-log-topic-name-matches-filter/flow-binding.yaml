@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: peppe
+  name: timer-to-log-topic-name-matches
 spec:
   source:
     ref:

@@ -8,4 +8,4 @@ kubectl apply -f flow-binding.yaml
 
 - Check logs
 
-kamel logs timer-to-log
+kamel logs timer-to-log-topic-name-matches
