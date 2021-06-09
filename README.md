@@ -54,4 +54,5 @@ Run samples
 - Time-based Lambda invocation to Telegram
 - Time-based to S3 Streaming Upload Sink
 - Time-based to Log with Has Header Filter
+- Time-based to Log with Tombstone Filter
 
