@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: s3-to-kafka-with-timestamp-router-1
+  name: s3-to-log
 spec:
   source:
     ref:
