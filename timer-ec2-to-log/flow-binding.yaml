@@ -23,9 +23,9 @@ spec:
       apiVersion: camel.apache.org/v1alpha1
       name: aws-ec2-sink
     properties:
-      accessKey: 'AKIA3LNAP5JEHCMOK5GS'
-      secretKey: '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'
-      region: 'eu-west-1'
+      accessKey: 'access'
+      secretKey: 'secret'
+      region: 'region'
   sink:
     ref:
       kind: Kamelet
