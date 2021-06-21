@@ -1,0 +1,33 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: time-ec2-log
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: timer-source
+    properties:
+      message: '"oscerd"'
+  steps:
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: insert-header-action
+    properties:
+      name: "instanceIds"
+      value: "i-05f72333bf81bbb89"
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: aws-ec2-sink
+    properties:
+      accessKey: 'AKIA3LNAP5JEHCMOK5GS'
+      secretKey: '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'
+      region: 'eu-west-1'
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
