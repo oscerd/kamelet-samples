@@ -53,6 +53,7 @@ Run samples
 - Simulation source to Log with predicate filter action
 - Time-based HTTP Invocation invocation to Log
 - Time-based HTTP Invocation invocation to Kafka
+- Time-based EC2 status invocation to Log
 - Time-based Lambda invocation to Telegram
 - Time-based to S3 Streaming Upload Sink
 - Time-based to Log with Has Header Filter
