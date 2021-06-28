@@ -9,10 +9,10 @@ spec:
       apiVersion: camel.apache.org/v1alpha1
       name: aws-kinesis-source
     properties:
-      accessKey: 'access'
-      secretKey: 'secret'
-      region: 'region'
-      stream: teststream 
+      accessKey: 'AKIA3LNAP5JENC3R64DG'
+      secretKey: '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'
+      region: 'eu-west-1'
+      stream: streamTest 
   sink:
     ref:
       kind: Kamelet
