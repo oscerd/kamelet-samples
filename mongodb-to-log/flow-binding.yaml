@@ -1,0 +1,23 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: mongodb-to-log
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: mongodb-source
+    properties:
+      hosts: 'my-release-mongodb.default.svc.cluster.local'
+      username: 'root'
+      password: 'b98PPW58Gn'
+      collection: 'log'
+      database: 'admin'
+      persistentTailTracking: true 
+      tailTrackIncreasingField: 'qty'
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
