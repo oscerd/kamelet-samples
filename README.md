@@ -51,6 +51,7 @@ Run samples
 - Simulation source to Log with mask field action
 - Simulation source to Log with replace field action
 - Simulation source to Log with predicate filter action
+- Simulation source to AWS S3
 - Time-based HTTP Invocation invocation to Log
 - Time-based HTTP Invocation invocation to Kafka
 - Time-based EC2 status invocation to Log
