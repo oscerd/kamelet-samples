@@ -10,4 +10,4 @@ kubectl apply -f flow-binding.yaml
 
 - Check logs
 
-kamel logs s3-to-kafka-with-timestamp-router -n kafka
+kamel logs mongodb-to-log
