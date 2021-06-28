@@ -35,6 +35,7 @@ Run samples
 - Kafka to Log
 - Kafka to Log with value to key action
 - Kafka to Log with manual commit and Telegram sink
+- MongoDB to Log
 - Simulation source to AWS Kinesis Firehose
 - Simulation source to AWS SNS
 - Simulation source to AWS SQS
