@@ -1,9 +1,10 @@
-# S3 to Log
+# MongoDB to Log
 
-- Set the correct credentials for S3 in the flow-binding.yaml
+- Set the correct credentials for MongoDB instance in the flow-binding.yaml
 
 - Run the following commands
 
+kubectl apply -f mongodb-source.kamelet.yaml
 kubectl apply -f log-sink.kamelet.yaml
 kubectl apply -f flow-binding.yaml 
 
