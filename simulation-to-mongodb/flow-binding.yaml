@@ -1,0 +1,24 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: simulation-to-mongodb
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: simulation-source
+    properties:
+      message: '{ "foo":"John", "bar":30, "baz":"ciao" }'
+      contentType: 'application/json'
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: mongodb-sink
+    properties:
+      hosts: 'my-release-mongodb.default.svc.cluster.local'
+      username: 'root'
+      password: 'b98PPW58Gn'
+      collection: 'log'
+      database: 'admin'
