@@ -1,0 +1,38 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: mustache-sample
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: simulation-source
+    properties:
+      message: 'Norse Mythology'
+  steps:
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: insert-header-action
+    properties:
+      name: "lastName"
+      value: "Mouse"
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: insert-header-action
+    properties:
+      name: "firstName"
+      value: "Mickey"
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: mustache-template-action
+    properties:
+      template: "ICAgICAgICBEZWFyIHt7aGVhZGVycy5sYXN0TmFtZX19LCB7e2hlYWRlcnMuZmlyc3ROYW1lfX0KCiAgICAgICAgVGhhbmtzIGZvciB0aGUgb3JkZXIgb2Yge3tib2R5fX0uCgogICAgICAgIFJlZ2FyZHMgQ2FtZWwgUmlkZXJzIEJvb2tzdG9yZQ=="
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
