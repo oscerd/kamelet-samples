@@ -28,6 +28,7 @@ Run samples
 - AWS Kinesis to Log
 - AWS S3 to Log
 - AWS S3 to Kafka with timestamp router action
+- AWS S3 to Kafka
 - Bitcoin to Log
 - Bitcoin to S3
 - FHIR to Telegram
