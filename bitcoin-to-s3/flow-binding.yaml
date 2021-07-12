@@ -9,14 +9,14 @@ spec:
       apiVersion: camel.apache.org/v1alpha1
       name: bitcoin-source
     properties:
-      period: 10000
+      period: 3000
   sink:
     ref:
       kind: Kamelet
       apiVersion: camel.apache.org/v1alpha1
       name: aws-s3-sink
     properties:
-      bucketNameOrArn: bucketName
+      bucketNameOrArn: bucket
       accessKey: access
       secretKey: secret
       region: region
