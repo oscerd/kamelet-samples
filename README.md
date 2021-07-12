@@ -30,6 +30,7 @@ Run samples
 - AWS S3 to Kafka with timestamp router action
 - AWS S3 to Kafka
 - Bitcoin to Log
+- Bitcoin to Kafka
 - Bitcoin to S3
 - FHIR to Telegram
 - Secured HTTP to Log
