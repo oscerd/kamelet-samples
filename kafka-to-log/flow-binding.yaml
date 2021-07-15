@@ -7,10 +7,10 @@ spec:
     ref:
       kind: Kamelet
       apiVersion: camel.apache.org/v1alpha1
-      name: kafka-source
+      name: kafka-not-secured-source
     properties:
       brokers: 'my-cluster-kafka-bootstrap:9092'
-      topic: 'test-topic'
+      topic: 'bitcoin-kafka-topic'
   sink:
     ref:
       kind: Kamelet

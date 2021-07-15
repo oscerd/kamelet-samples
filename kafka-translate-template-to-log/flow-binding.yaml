@@ -1,0 +1,35 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: kafka-translate-template-to-log
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: kafka-not-secured-source
+    properties:
+      brokers: 'my-cluster-kafka-bootstrap:9092'
+      topic: 'mytopic-testing'
+  steps:
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: aws-translate-action
+    properties:
+      accessKey: "access"
+      secretKey: "secret"
+      region: "region"
+      sourceLanguage: "it"
+      targetLanguage: "en"
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: mustache-template-action
+    properties:
+      template: "RGVhciB1c2VyLCB0aGlzIGlzIHRoZSB0cmFuc2xhdGlvbiB5b3Ugd2VyZSBsb29raW5nIGZvci4KCnt7Ym9keX19"
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
