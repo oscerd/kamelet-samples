@@ -1,14 +1,18 @@
-# Simulation to AWS Translate to Log
+# Kafka to AWS Translate with template to Log
+
+- Use the quickstart for https://strimzi.io/quickstarts/ and follow the minikube guide.
+
+- Install camel-k on the kafka namespace
 
 - Set correctly the AWS Credentials for AWS translate in the flow-binding file
 
 - Run the following commands
 
-kubectl apply -f simulation-source.kamelet.yaml
-kubectl apply -f aws-translate-action.kamelet.yaml
 kubectl apply -f log-sink.kamelet.yaml
 kubectl apply -f flow-binding.yaml
 
+Ingest data in your kafka topic
+
 - Check logs
 
-kamel logs simulation-translate-to-log
+kamel logs kafka-translate-template-to-log
