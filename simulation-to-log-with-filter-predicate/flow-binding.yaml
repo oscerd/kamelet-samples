@@ -4,9 +4,12 @@ metadata:
   name: simulation-to-log-with-predicate-filter
 spec:
   integration:
-    configuration:
-      - type: property
-        value: "quarkus.arc.remove-unused-beans=none"
+    traits:
+      builder:
+        configuration:
+          properties:
+#          - "quarkus.arc.remove-unused-beans=none"
+          - "quarkus.arc.unremovable-types=com.fasterxml.jackson.databind.ObjectMapper"
   source:
     ref:
       kind: Kamelet
@@ -25,7 +28,7 @@ spec:
       apiVersion: camel.apache.org/v1alpha1
       name: predicate-filter-action
     properties:
-      expression: "@.foo =~ /.*Lennon/"
+      expression: "@.foo =~ /.*John/"
   sink:
     ref:
       kind: Kamelet
