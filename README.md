@@ -60,6 +60,7 @@ Run samples
 - Simulation source to Log with predicate filter action
 - Simulation source to Log with Mustache template action
 - Simulation source to Log with Json Schema Validator action
+- Simulation source to Log with Jsonata action
 - Simulation source to AWS S3
 - Simulation source to MongoDB
 - Time-based HTTP Invocation invocation to Log
