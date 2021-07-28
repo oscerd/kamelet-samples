@@ -29,6 +29,7 @@ Run samples
 - AWS S3 to Log
 - AWS S3 to Kafka with timestamp router action
 - AWS S3 to Kafka
+- Azure Storage Blob to Log
 - Bitcoin to Log
 - Bitcoin to Kafka
 - Bitcoin to S3
