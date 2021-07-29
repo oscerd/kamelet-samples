@@ -64,6 +64,7 @@ Run samples
 - Simulation source to Log with Jsonata action
 - Simulation source to AWS S3
 - Simulation source to MongoDB
+- Simulation source to MS SQL Server
 - Time-based HTTP Invocation invocation to Log
 - Time-based HTTP Invocation invocation to Kafka
 - Time-based EC2 status invocation to Log
