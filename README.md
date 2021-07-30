@@ -41,6 +41,7 @@ Run samples
 - Kafka to Log with value to key action
 - Kafka to Log with manual commit and Telegram sink
 - Kafka to AWS Translate and template to log sink
+- Kafka to AWS S3 Streaming Upload Sink
 - MongoDB to Log
 - PostgreSQL to Log
 - Simulation source to AWS Kinesis Firehose
