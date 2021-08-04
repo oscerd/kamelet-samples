@@ -27,6 +27,7 @@ Run samples
 - AWS DDB Streams to Telegram
 - AWS Kinesis to Log
 - AWS S3 to Log
+- AWS S3 to Log with Secret
 - AWS S3 to Kafka with timestamp router action
 - AWS S3 to Kafka
 - Azure Storage Blob to Log
