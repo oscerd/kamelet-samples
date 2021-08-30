@@ -64,6 +64,7 @@ Run samples
 - Simulation source to Log with Mustache template action
 - Simulation source to Log with Json Schema Validator action
 - Simulation source to Log with Jsonata action
+- Simulation source to Log with XJ Identity action
 - Simulation source to AWS S3
 - Simulation source to MongoDB
 - Simulation source to MS SQL Server
