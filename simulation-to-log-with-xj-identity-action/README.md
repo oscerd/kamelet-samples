@@ -9,4 +9,4 @@ kubectl apply -f flow-binding.yaml
 
 - Check logs
 
-kamel logs simulation-to-log-with-json-schema-validator
+kamel logs simulation-to-log-with-xj-identity-action
