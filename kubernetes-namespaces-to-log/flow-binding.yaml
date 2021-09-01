@@ -1,0 +1,18 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: namespace-to-log
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: kubernetes-namespaces-source
+    properties:
+      masterUrl: 'https://192.168.99.100:8443'
+      token: 'eyJhbGciOiJSUzI1NiIsImtpZCI6Im93RmJzdW84Y0xYNkMxMUtkZ29aXzJHQmFMQjFKYm5JS0xxbTNpdU9xQVkifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImRlZmF1bHQtdG9rZW4td2xybnciLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiZGVmYXVsdCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjdmOTQ5MWU1LTQyNTAtNGNkMy1hODdkLTEyMjdjMGZiNDNjNSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.BbzKy7OTiDOQwKJHctMa4axRA2cet5OMyb2TEBN0-H_4tto2hFezNPGUM8C6a124Tu1hr04I3DIKJhc_KUj3EbQOnnfjtIkf0tK1BUhbKNXJWEwSMcp5wmIXQFYMzFRKc5e4EkKTXQ7Ld0Sap5WB8QKs9ccQ4Zhz6MiRAJJ8kj8YYLlYO3jFp_tY9S84ND1VuJW9JR-G-oPjrFys764AYV1MY_-0FUsiux58cBS4pJY1AzKSaLN3EdJmLQ64VeXIwDC0VGumKF7Uh5dt-HN8Aew4qqYBkF-79ltreiBkkwOKUd3INTFpbVI54SMTO-jBqErNsJF5gFbKH0YXx9Amlw'
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
