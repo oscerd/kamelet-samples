@@ -44,6 +44,7 @@ Run samples
 - Kafka to AWS Translate and template to log sink
 - Kafka to AWS S3 Streaming Upload Sink
 - Kubernetes Namespaces Watcher to Log
+- Kubernetes Pods Watcher to Log
 - MongoDB to Log
 - PostgreSQL to Log
 - Simulation source to AWS Kinesis Firehose
