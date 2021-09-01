@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: namespace-to-log
+  name: pods-to-log
 spec:
   source:
     ref:
