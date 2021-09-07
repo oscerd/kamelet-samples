@@ -1,4 +1,4 @@
-# Simulation to LOG with json-schema validator action
+# Simulation to LOG with xj template action
 
 - Run the following commands
 
