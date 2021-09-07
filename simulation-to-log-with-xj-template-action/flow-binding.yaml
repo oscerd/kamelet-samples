@@ -1,0 +1,30 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: simulation-to-log-with-xj-template-validator
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: simulation-source
+    properties:
+      message: '{ "id": "1", "name":"pippo" }'
+      contentType: 'application/json'
+  steps:
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
+  - ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: xj-template-action
+    properties:
+      direction: "JSON2XML"
+      template: "PHhzbDpzdHlsZXNoZWV0IHZlcnNpb249IjEuMCIKICAgICAgICAgICAgICAgIHhtbG5zOnhzbD0iaHR0cDovL3d3dy53My5vcmcvMTk5OS9YU0wvVHJhbnNmb3JtIgogICAgICAgICAgICAgICAgeG1sbnM6eGo9Imh0dHA6Ly9jYW1lbC5hcGFjaGUub3JnL2NvbXBvbmVudC94aiIKICAgICAgICAgICAgICAgIGV4Y2x1ZGUtcmVzdWx0LXByZWZpeGVzPSIjYWxsIj4KCiAgICA8eHNsOm91dHB1dCBvbWl0LXhtbC1kZWNsYXJhdGlvbj0ibm8iIGVuY29kaW5nPSJVVEYtOCIgbWV0aG9kPSJ4bWwiIGluZGVudD0ibm8iLz4KCiAgICA8eHNsOnRlbXBsYXRlIG1hdGNoPSIvIj4KICAgICAgICA8eHNsOmFwcGx5LXRlbXBsYXRlcyBzZWxlY3Q9Im5hbWUiLz4KICAgIDwveHNsOnRlbXBsYXRlPgoKICAgIDx4c2w6dGVtcGxhdGUgbWF0Y2g9Im9iamVjdCI+CiAgICAgICAgPHhzbDp2YXJpYWJsZSBuYW1lPSJuYW1lIiBzZWxlY3Q9IkB4ajpuYW1lIi8+CiAgICAgICAgPHhzbDplbGVtZW50IG5hbWU9InskbmFtZX0iPgogICAgICAgICAgICA8eHNsOnZhbHVlLW9mIHNlbGVjdD0idGV4dCgpIi8+CiAgICAgICAgPC94c2w6ZWxlbWVudD4KICAgIDwveHNsOnRlbXBsYXRlPgoKPC94c2w6c3R5bGVzaGVldD4="
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
