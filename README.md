@@ -35,6 +35,7 @@ Run samples
 - Bitcoin to Kafka
 - Bitcoin to S3
 - FHIR to Telegram
+- Google Pubsub to Log
 - Secured HTTP to Log
 - Kafka to Kafka with regex router action
 - Kafka to Kafka with timestamp router action
