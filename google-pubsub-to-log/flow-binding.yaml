@@ -1,0 +1,19 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: google-pubsub-to-log-1
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: google-pubsub-source
+    properties:
+      serviceAccountKey: "<serviceaccountkey_base64>"
+      projectId: 'pubsub-project'
+      subscriptionName: 'pubsub-topic'
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: log-sink
