@@ -1,12 +1,14 @@
-# S3 to Log
+# Google Pubsub to Log
 
-- Set the correct credentials for S3 in the flow-binding.yaml
+- This needs Camel K 1.6.0
+
+- Set the correct credentials for Google Pubsub in the flow-binding.yaml
 
 - Run the following commands
 
-kubectl apply -f log-sink.kamelet.yaml
+kubectl apply -f google-pubsub-source.kamelet.yaml
 kubectl apply -f flow-binding.yaml 
 
 - Check logs
 
-kamel logs s3-to-kafka-with-timestamp-router -n kafka
+kamel logs google-pubsub-to-log

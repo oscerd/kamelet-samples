@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: KameletBinding
 metadata:
-  name: google-pubsub-to-log-1
+  name: google-pubsub-to-log
 spec:
   source:
     ref:
