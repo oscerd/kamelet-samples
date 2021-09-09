@@ -55,6 +55,7 @@ Run samples
 - Simulation source to AWS Translate to Log
 - Simulation source to Azure Storage Blob
 - Simulation source to Dropbox
+- Simulation source to Google Pubsub
 - Simulation source to Kafka
 - Simulation source to Kafka with message timestamp router action
 - Simulation source to Log with extract field action
