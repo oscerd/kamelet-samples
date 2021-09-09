@@ -1,13 +1,13 @@
-# Simulation to MongoDB
+# Simulation to Google Pubsub
 
-- Using the Camel-K 1.5.0-SNAPSHOT, you should have the MongoDB Sink Kamelet already installed.
+- This needs Camel K 1.6.0
 
-- Run the following commands (for completeness we add the MongoDB Sink Kamelet installation)
+- Set the correct credentials for Google Pubsub in the flow-binding.yaml
 
 kubectl apply -f simulation-source.kamelet.yaml
-kubectl apply -f mongodb-sink.kamelet.yaml
+kubectl apply -f google-pubsub-sink.kamelet.yaml
 kubectl apply -f flow-binding.yaml
 
 - Check logs
 
-kamel logs simulation-to-mongodb
+kamel logs simulation-to-google-pubsub
