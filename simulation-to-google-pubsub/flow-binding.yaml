@@ -1,0 +1,22 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: simulation-to-google-pubsub
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: simulation-source
+    properties:
+      message: '{ "foo":"John", "bar":30, "baz":"ciao" }'
+      contentType: 'application/json'
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: google-pubsub-sink
+    properties:
+      serviceAccountKey: "<serviceaccountkey_base64>"
+      projectId: 'pubsub-project'
+      destinationName: 'pubsub-topic'
