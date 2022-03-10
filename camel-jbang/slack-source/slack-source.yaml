@@ -18,7 +18,7 @@
     from:
       uri: "kamelet:slack-source"
       parameters:
-        channel: "general"
+        channel: "{{channel}}"
         token: "{{token}}"
       steps:
         - to: 
